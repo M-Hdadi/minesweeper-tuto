@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr0w0y8vbl5ei"]
+
+[ext_resource type="PackedScene" uid="uid://ko7tqnn1x75q" path="res://scenes/three_numbers.tscn" id="1_1c7t8"]
+[ext_resource type="Script" path="res://scenes/main_bar.gd" id="1_5tv2d"]
+[ext_resource type="PackedScene" uid="uid://1hntumqfg7o6" path="res://scenes/emoji_face.tscn" id="3_0sqvy"]
+
+[node name="MainBar" type="Control"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 120.0
+script = ExtResource("1_5tv2d")
+
+[node name="Timer" parent="." instance=ExtResource("1_1c7t8")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 64.0
+offset_bottom = 50.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MineCounter" parent="." instance=ExtResource("1_1c7t8")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -64.0
+offset_right = 0.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="EmojiFace" parent="." instance=ExtResource("3_0sqvy")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 551.0
+offset_top = 19.0
+offset_right = -551.0
+offset_bottom = 69.0
+grow_horizontal = 2
+wait_time = 0.2
+
+[node name="NewGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -169.0
+offset_top = 77.0
+offset_right = -76.0
+offset_bottom = 108.0
+grow_horizontal = 0
+text = "New Game"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_top = 77.0
+offset_bottom = 108.0
+grow_horizontal = 0
+text = "Settings"
+
+[node name="Scores" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -235.0
+offset_top = 77.0
+offset_right = -176.0
+offset_bottom = 108.0
+grow_horizontal = 0
+text = "Scores"

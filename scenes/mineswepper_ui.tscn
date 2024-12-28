@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://ra7orqco7b8n"]
+
+[ext_resource type="PackedScene" uid="uid://cr0w0y8vbl5ei" path="res://scenes/main_bar.tscn" id="1_lpo8s"]
+[ext_resource type="Script" path="res://scenes/mineswepper_ui.gd" id="1_ndsmr"]
+[ext_resource type="PackedScene" uid="uid://dq4lmirjd586p" path="res://scenes/core_minesweeper.tscn" id="2_pitfc"]
+[ext_resource type="PackedScene" uid="uid://cte5vodaxphyb" path="res://scenes/settings_wnd.tscn" id="3_lue2i"]
+[ext_resource type="PackedScene" uid="uid://de7t5cax5tpog" path="res://scenes/scores_wnd.tscn" id="5_fxuhp"]
+[ext_resource type="PackedScene" uid="uid://i042m6d0bgxs" path="res://scenes/winning_wnd.tscn" id="6_0bwbv"]
+
+[node name="MineswepperUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ndsmr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainBar" parent="VBoxContainer" instance=ExtResource("1_lpo8s")]
+layout_mode = 2
+
+[node name="CoreMinesweeper" parent="VBoxContainer" instance=ExtResource("2_pitfc")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 2
+
+[node name="SettingParent" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SettingsWnd" parent="SettingParent" instance=ExtResource("3_lue2i")]
+layout_mode = 0
+
+[node name="ScoresParent" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoresWnd" parent="ScoresParent" instance=ExtResource("5_fxuhp")]
+
+[node name="WinningParent" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WinningWnd" parent="WinningParent" instance=ExtResource("6_0bwbv")]
+anchors_preset = 0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://vskuw87igipv"]
+
+[ext_resource type="Script" path="res://scenes/score.gd" id="1_acbkf"]
+[ext_resource type="FontFile" uid="uid://docayip5xfb0s" path="res://fonts/fire_mono_regular.ttf" id="2_bme6s"]
+
+[node name="Score" type="Control"]
+custom_minimum_size = Vector2(150, 22)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 22.0
+script = ExtResource("1_acbkf")
+
+[node name="Date" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_bme6s")
+text = "2024-12-24"
+vertical_alignment = 1
+
+[node name="Second" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_right = 142.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_bme6s")
+text = "450"
+horizontal_alignment = 2
+vertical_alignment = 1

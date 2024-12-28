@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://cte5vodaxphyb"]
+
+[ext_resource type="Script" path="res://scenes/settings_wnd.gd" id="1_3xcjb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1lhm"]
+bg_color = Color(0.184314, 0.184314, 0.184314, 0.941176)
+
+[node name="SettingsWnd" type="Panel"]
+offset_right = 220.0
+offset_bottom = 260.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n1lhm")
+script = ExtResource("1_3xcjb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = -41.0
+offset_right = -69.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Close"
+
+[node name="Sizes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 40.0
+offset_right = 70.0
+offset_bottom = 70.0
+text = "Sizes"
+vertical_alignment = 1
+
+[node name="MenuButton" type="MenuButton" parent="Sizes"]
+layout_mode = 0
+offset_left = 42.0
+offset_right = 120.0
+offset_bottom = 31.0
+text = "Beginner"
+item_count = 4
+popup/item_0/text = "Beginner"
+popup/item_1/text = "Intermediate"
+popup/item_1/id = 1
+popup/item_2/text = "Advanced"
+popup/item_2/id = 2
+popup/item_3/text = "Custom"
+popup/item_3/id = 3
+
+[node name="Width_lbl" type="Label" parent="Sizes"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 54.0
+offset_right = 78.0
+offset_bottom = 77.0
+text = "Width (9 - 30)"
+
+[node name="Width" type="SpinBox" parent="Sizes"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 50.0
+offset_right = 185.063
+offset_bottom = 81.0
+min_value = 9.0
+max_value = 30.0
+value = 9.0
+alignment = 2
+
+[node name="Height_lbl" type="Label" parent="Sizes"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 94.0
+offset_right = 83.0
+offset_bottom = 117.0
+text = "Height (9 - 24)"
+
+[node name="Height" type="SpinBox" parent="Sizes"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 90.0
+offset_right = 185.063
+offset_bottom = 121.0
+min_value = 9.0
+max_value = 24.0
+value = 9.0
+alignment = 2
+
+[node name="Mines_lbl" type="Label" parent="Sizes"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 132.0
+offset_right = 96.0
+offset_bottom = 155.0
+text = "Mines (10 - 668)"
+
+[node name="Mines" type="SpinBox" parent="Sizes"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 128.0
+offset_right = 185.063
+offset_bottom = 159.0
+min_value = 10.0
+max_value = 668.0
+value = 10.0
+alignment = 2

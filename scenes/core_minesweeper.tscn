@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq4lmirjd586p"]
+
+[ext_resource type="Script" path="res://scenes/core_minesweeper.gd" id="1_hggmo"]
+
+[node name="CoreMinesweeper" type="Control"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 450.0
+script = ExtResource("1_hggmo")
+
+[node name="BlockParent" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClickControl" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
